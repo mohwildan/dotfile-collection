@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.1.0",
+    "prettier": "2.8.8"
+  },
+  "name": "global",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tnt-fe": "cd my-job/yureka/tnt/tnt-fe && pnpm dev",
+    "tnt-api-shipping-ts": "cd my-job/yureka/tnt/tnt-api-shipping-ts && pnpm start:dev",
+    "tnt-api-shipping": "cd my-job/yureka/tnt/tnt-api-shipping && go run app/main.go",
+    "tnt-api-users": "cd my-job/yureka/tnt/tnt-api-users && npm run dev",
+    "tnt-api-superadmin": "cd my-job/yureka/tnt/tnt-api-superadmin && go run app/main.go",
+    "tnt-api-acceptance": "cd my-job/yureka/tnt/tnt-api-acceptance && go run app/main.go",
+    "tnt-api-product": "cd my-job/yureka/tnt/tnt-api-product && go run app/main.go",
+    "tnt-api-serialisasi": "cd my-job/yureka/tnt/tnt-api-serialisasi && npm run start:dev",
+    "tnt-api-storage": "cd my-job/yureka/tnt/tnt-api-storage && go run app/main.go",
+    "tnt-api-customer": "cd my-job/yureka/tnt/tnt-api-customer && npm run dev",
+    "tnt-api-company": "cd my-job/yureka/tnt/tnt-api-company && go run app/main.go",
+    "tnt-api-warehouse": "cd my-job/yureka/tnt/tnt-api-warehouse && npm run dev",
+    "tnt-api-reception": "cd my-job/yureka/tnt/tnt-api-reception && npm run dev",
+    "tnt-api-serialisasi:all": "concurrently \"npm run tnt-api-serialisasi\" \"npm run tnt-api-users\" \"npm run tnt-api-superadmin \" \"npm run tnt-api-product \" \"npm run tnt-api-warehouse\" \"npm run tnt-api-shipping\" \"npm run tnt-api-reception\"",
+    "tnt-api-customer:all": "concurrently \"npm run tnt-api-customer\" \"npm run tnt-api-users\" \"npm run tnt-api-superadmin \" \"npm run tnt-api-company \" \"npm run tnt-api-warehouse \"",
+    "tnt-api-shipping-ts:all": "concurrently \"npm run tnt-api-shipping-ts\" \"npm run tnt-api-users\" \"npm run tnt-api-superadmin \" \"npm run tnt-api-storage \" \"npm run tnt-api-acceptance \""
+  },
+  "author": "mohammad wildan",
+  "license": "ISC",
+  "description": "this is global npm"
+}
