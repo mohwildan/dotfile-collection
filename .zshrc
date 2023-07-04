@@ -9,6 +9,7 @@ export PATH=~/.npm-global/bin:$PATH
 alias nvimv="NVIM_APPNAME=nvimv nvim"
 alias ng="npm run-script --prefix ~/"
 alias dotfile="/usr/local/bin/git --git-dir=$HOME/dotfile-collection/ --work-tree=/"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 function nvims() {
   items=("default" "nvimv")
